@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Multiplication Table</h1>
+<input type="number" id="numberInput" placeholder="Enter a number" />
+<button onclick="printMultiplicationTable()">Generate Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function printMultiplicationTable() {
+    const number = document.getElementById('numberInput').value;
+    const tableContainer = document.getElementById('tableContainer');
+    tableContainer.innerHTML = ''; // Clear previous table
+
+    if (number) {
+        let tableHTML = `<h2>Multiplication Table for ${number}:</h2><table>`;
+        tableHTML += '<tr><th>Multiplier</th><th>Result</th></tr>';
+
+        for (let i = 1; i <= 10; i++) {
+            tableHTML += `<tr><td>${number} x ${i}</td><td>${number * i}</td></tr>`;
+        }
+
+        tableHTML += '</table>';
+        tableContainer.innerHTML = tableHTML;
+    } else {
+        tableContainer.innerHTML = '<p>Please enter a number.</p>';
+    }
+}
+</script>
+
+</body>
+</html>

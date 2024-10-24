@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Boxes Example</title>
+</head>
+<body>
+    <script>
+        // 1. Alert dialog box
+        alert("Welcome to the dialog box demonstration!");
+
+        // 2. Prompt dialog box
+        let userName = prompt("Please enter your name:", "Your name here");
+        if (userName) {
+            alert(`Hello, ${userName}! Nice to meet you.`);
+        } else {
+            alert("You didn't enter a name.");
+        }
+
+        // 3. Confirm dialog box
+        let isSure = confirm("Are you sure you want to proceed?");
+        if (isSure) {
+            alert("You chose to proceed.");
+        } else {
+            alert("You chose to cancel.");
+        }
+    </script>
+</body>
+</html>

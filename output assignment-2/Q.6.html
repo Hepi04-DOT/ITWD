@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd</title>
+    <script>
+        function checkEvenOdd() {
+            // Prompt the user for a number
+            let number = prompt("Please enter a number:");
+
+            // Convert the input to a number
+            number = Number(number);
+
+            // Check if the input is a valid number
+            if (!isNaN(number)) {
+                // Determine if the number is even or odd
+                if (number % 2 === 0) {
+                    alert(number + " is even.");
+                } else {
+                    alert(number + " is odd.");
+                }
+            } else {
+                alert("That's not a valid number!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="checkEvenOdd()">Check Even or Odd</button>
+</body>
+</html>

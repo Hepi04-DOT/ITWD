@@ -1,0 +1,62 @@
+<<!DOCTYPE html>
+<html>
+<head>
+<title> Three Frame Layout</title>
+<style>
+   /*Basic styling for the layout*/
+   body{
+       margin: 0;
+	   padding: 0;
+	   overflow: hidden;
+	   }
+	   .frame-container{
+	   display: flex;
+	   flex-direction: column;
+	   height: 100vh;
+	   }
+	   .top-row{
+	   display:flex;
+	   width: 100%
+	   height: 50%
+	   }
+	   .left-column,.right-column{
+	   border:1px solid#ccc;
+	   }
+	   .left-column{
+	   width: 30%;
+	   }
+	   .right-column{
+	   width:70%;
+	   }
+	   .bottom-fream{
+	   flex: 1;
+	   border: 1px solid #ccc;
+	   }
+	   ifream{
+	      width: 100%;
+		  height: 100%;
+		  border: none;
+		  }
+		  </style>
+		  </head>
+		  <body>
+		  <div class="frame-container">
+		  <div class="top-row">
+		  <div class="left-column">
+		  <iframe src="ASSIGNMENT-Q.2.html"name="frame 1"></frame>
+		  <a href="https://example.com"target="frame 1">open in left frame</a>
+		  </div>
+		  <div class="right-column">
+		  <iframe src="ASSIGNMENT-Q.2.html"name="frame2"></iframe>
+		  <a href="https://example.org"target="frame2">open in right frame</a>
+		  </div>
+		  </div>
+		  <div class="bottom-fream">
+		   <iframe src="ASSIGNMENT-Q.2.html"name="frame3"></iframe>
+		   <a href="https://example.net"target="frame3">open in bottom frame</a>
+		   </div>
+		   </div>
+		   </body>
+		   </html>
+		   
+	   

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisible by 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Numbers Divisible by 3 (1 to 50)</h1>
+<ul id="divisibleList"></ul>
+
+<script>
+function findDivisibleByThree() {
+    let number = 1;
+    const divisibleList = document.getElementById('divisibleList');
+
+    do {
+        if (number % 3 === 0) {
+            const listItem = document.createElement('li');
+            listItem.textContent = number;
+            divisibleList.appendChild(listItem);
+        }
+        number++;
+    } while (number <= 50);
+}
+
+findDivisibleByThree();
+</script>
+
+</body>
+</html>
